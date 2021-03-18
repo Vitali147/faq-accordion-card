@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | FAQ Accordion Card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+  <div class="container">
+    <div class="imageBox">
+      <img class = "patternMobile" src="images/bg-pattern-mobile.svg" alt="bg pattern">
+      <img class = "imageMobile" src="images/illustration-woman-online-mobile.svg" alt="image">
+      <img class = "patternDesktop" src="images/bg-pattern-desktop.svg" alt="bg pattern">
+      <img class = "imageDesktop" src="images/illustration-woman-online-desktop.svg" alt="image">
+      <img class = "boxDesktop" src="images/illustration-box-desktop.svg" alt="image of a box">
+    </div>
+    <div class="questionsBox">
+      <h1>FAQ</h1>
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+      <button class = "question" type="accordion">How many team members can I invite?</button>
+      <div class="panel">
+        <p>You can invite up to 2 additional users on the Free plan. There is no limit on
+          team members for the Premium plan.</p>
+      </div>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+      <button class = "question" type="accordion">What is the maximum file upload size?</button>
+      <div class="panel">
+        <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+      </div>
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+      <button class = "question" type="accordion">How do I reset my password?</button>
+      <div class="panel">
+        <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.</p>
+      </div>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+      <button class = "question" type="accordion">Can I cancel my subscription?</button>
+      <div class="panel">
+        <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+      </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <button class = "question" type="accordion">Do you provide additional support?</button>
+      <div class="panel">
+        <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+      </div>
+    </div>
+
+
   </div>
+
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+<script src="faq.js" charset="utf-8"></script>
 </body>
+
 </html>
