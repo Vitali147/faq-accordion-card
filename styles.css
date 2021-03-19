@@ -1,7 +1,10 @@
-/* BASE STYLES */
+
+
+/* BASE STYLES & MOBILE SCREEN LAYOUT*/
 
 html {
-  min-height: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(#af67e9, #6565e7);
 }
 
 body {
@@ -9,9 +12,18 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(#af67e9, #6565e7);
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 12px;
+}
+
+.container {
+  width: 328px;
+  height: 536px;
+  background: #fff;
+  position: absolute;
+  border-radius: 25px;
+  margin-top: 146px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15), 0 8px 26px 20px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -27,19 +39,24 @@ button {
   border-bottom: solid 1px #e7e7e9;
   text-align: left;
   color: #4a4b5e;
-  height: 55px;
+  height: 52px;
 }
-button:focus{
-  outline:0;
+
+button:focus {
+  outline: 0;
   font-weight: bold;
   /* color: #f47c57; */
 }
+/* focus can be changed to the above colour instead of font-weight bold, or removed altogether(not preferred) */
+
 .panel {
   display: none;
   margin-top: -20px;
   padding-right: 20px;
   border-bottom: solid 1px #e7e7e9;
+    line-height: 1.5;
 }
+
 p {
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 12px;
@@ -54,7 +71,7 @@ p {
 
 .active {
   font-weight: bold;
-  color:#1d1e35;
+  color: #1d1e35;
   border-bottom: none;
 }
 
@@ -62,22 +79,12 @@ p {
   content: url("images/icon-arrow-down.svg");
   float: right;
 }
-.active:after{
-  transform:rotate(180deg);
-}
-/* MOBILE SCREEN LAYOUT */
 
-.container {
-  width: 325px;
-  height: 540px;
-  background: #fff;
-  position: absolute;
-  border-radius: 25px;
-  margin-top: 150px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15), 0 8px 26px 20px rgba(0, 0, 0, 0.1);
+.active:after {
+  transform: rotate(180deg);
 }
 
-.patternMobile, .imageMobile {
+.patternMobile, .imageMobile, .patternDesktop, .imageDesktop, .boxDesktop {
   position: absolute;
 }
 
@@ -88,8 +95,9 @@ p {
 .patternMobile {
   margin: 0 44px;
 }
-.patternDesktop, .imageDesktop, .boxDesktop{
-  display:none;
+
+.patternDesktop, .imageDesktop, .boxDesktop {
+  display: none;
 }
 
 .questionsBox {
@@ -102,16 +110,67 @@ h1 {
   color: #1d1e35;
   margin-bottom: 12px;
 }
-/* 
+
+
 @media only screen and (min-width: 1200px) {
+  .container {
+    width: 922px;
+    height: 510px;
+    margin-top: 130px;
+    margin-left: 40px;
+    overflow: hidden;
+  }
+
+  .imageBox {
+    margin: 0;
+    width: 461px;
+    float: left;
+  }
+
+  .questionsBox {
+    margin:0;
+    width: 441px;
+    padding-top:50px;
+    padding-left:40px;
+    float: right;
+  }
+  h1{
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  button {
+    font-size: 14px;
+    min-width: 79%;
+  }
+
+  .panel {
+    display: none;
+    margin-top: -20px;
+    margin-right: 21%;
+  }
+
+  .question:after {
+    margin-right: 15px;
+  }
 
   .patternMobile, .imageMobile {
     display: none;
   }
 
-  .patternDesktop, .imageDesktop, .boxDesktop{
-    display:block;
-    position: absolute;
+  .patternDesktop, .imageDesktop, .boxDesktop {
+    display: block;
   }
 
-} */
+  .patternDesktop {
+    margin: -295px -575px;
+  }
+
+  .imageDesktop {
+    margin: 72px -80px;
+  }
+
+  .boxDesktop {
+    z-index: 1;
+    margin: 340px -438px;
+  }
+}
