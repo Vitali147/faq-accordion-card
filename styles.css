@@ -125,6 +125,7 @@ h1 {
     margin: 0;
     width: 461px;
     float: left;
+
   }
 
   .questionsBox {
@@ -163,14 +164,16 @@ h1 {
 
   .patternDesktop {
     margin: -295px -575px;
+
   }
 
   .imageDesktop {
     margin: 72px -80px;
+
   }
 
   .boxDesktop {
     z-index: 1;
-    margin: 340px -438px;
+      margin: 340px -438px;
   }
 }
